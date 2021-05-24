@@ -1,0 +1,11 @@
+.social-icon {
+	margin: 20px 0 0;
+	.icon {
+		margin-right: 20px;
+		transition: transform 250ms;
+
+		&:hover {
+			transform: translateY(-4px);
+		}
+	}
+}

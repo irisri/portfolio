@@ -8,8 +8,8 @@ export function Experience() {
 	const { workExperience } = useContext(CvContext);
 
 	return (
-		<section className="flex card">
-			<h3 className="text-color">Experience:</h3>
+		<section className="flex card experience">
+			<h2 className="text-color">Experience:</h2>
 			<div>
 				{workExperience.map((position, index) => (
 					<WorkExperienceCmp key={index} position={position} />

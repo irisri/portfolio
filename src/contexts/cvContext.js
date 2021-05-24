@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, createContext } from "react";
 
 export const CvContext = createContext();

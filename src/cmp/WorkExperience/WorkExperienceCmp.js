@@ -2,14 +2,8 @@ import React from "react";
 import "./WorkExperienceCmp.scss";
 
 export function WorkExperienceCmp(props) {
-	const {
-		employed,
-		company,
-		role,
-		link,
-		companyDescription,
-		workDescription,
-	} = props.position;
+	const { employed, company, role, link, companyDescription, workDescription } =
+		props.position;
 
 	return (
 		<div className="experience-info">
@@ -26,7 +20,11 @@ export function WorkExperienceCmp(props) {
 					<li key={index}>{description}</li>
 				))}
 			</ul>
-			{link && <a href={link}>Read More!</a>}
+			{link && (
+				<a href={link}>
+					<strong>Read More!</strong>
+				</a>
+			)}
 		</div>
 	);
 }

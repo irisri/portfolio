@@ -1,11 +1,5 @@
 import React, { useState, createContext } from "react";
 
-import chess from "../assets/img/chess.png";
-import mineSweeper from "../assets/img/Mine-sweeper.png";
-import collectBalls from "../assets/img/chess.png";
-import touchNums from "../assets/img/Touch Nums.png";
-import endorphinRush from "../assets/img/Endorphin rush";
-
 export const ProjectContext = createContext();
 
 export const ProjectProvider = (props) => {
@@ -13,44 +7,51 @@ export const ProjectProvider = (props) => {
 		{
 			name: "Chess",
 			link: "https://irisri.github.io/chess/",
-			img: { chess },
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621780058/portfolio/ruhazwoo6viuaofabngi.png",
 			description: "",
 			technologies: ["JavaScript", "CSS"],
 		},
 		{
 			name: "MineSweeper",
 			link: "https://irisri.github.io/mine-sweeper/",
-			img: { mineSweeper },
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621780057/portfolio/wpydpp01o281s5mbjhms.png",
 			description: "",
 			technologies: ["JavaScript", "CSS"],
 		},
 		{
 			name: "Touch Nums",
 			link: "https://irisri.github.io/touch-nums/",
-			img: { touchNums },
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621780058/portfolio/qzygal8rbyy7eep2enwc.png",
 			description: "",
 			technologies: ["JavaScript", "CSS"],
 		},
 		{
 			name: "Collect Balls",
 			link: "https://irisri.github.io/ball-board/",
-			img: { collectBalls },
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621780057/portfolio/uyigebfvmke8q8fmzigk.png",
 			description: "",
 			technologies: ["JavaScript", "CSS"],
 		},
 		{
 			name: "APSUS",
 			link: "https://irisri.github.io/appsus/#/",
-			img: "",
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621781157/portfolio/ygrqxxmhrtarle5ervvm.png",
 			description: "Three apps in 1!",
 			technologies: ["Vue", "JavaScrip", "CSS", "MongoDB", "socket.io"],
 		},
 		{
 			name: "Endorphin rush",
 			link: "https://endorphin-rush.herokuapp.com/#/",
-			img: { endorphinRush },
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621780065/portfolio/mvqjqlud05nbvjsr0lcx.png",
 			description: "",
 			technologies: ["Vue", "JavaScrip", "CSS", "SASS", "Node.Js"],
+		},
+		{
+			name: "network-leads",
+			link: "https://irisri.github.io/network-leads",
+			img: "https://res.cloudinary.com/des4awkkx/image/upload/v1621781341/portfolio/ugwrkf4xtghfu1tdvjsq.png",
+			description: "",
+			technologies: ["React", "JavaScrip", "CSS", "Context", "Hooks"],
 		},
 	];
 
@@ -64,11 +65,12 @@ export const ProjectProvider = (props) => {
 
 	// { name: "", link: "", img: "", description: "", technologies: [] },
 
+	// eslint-disable-next-line no-unused-vars
 	const [projects, setProjects] = useState(projectsInfo);
 
 	return (
-		<ProjectProvider.Provider value={{ projects }}>
+		<ProjectContext.Provider value={{ projects }}>
 			{props.children}
-		</ProjectProvider.Provider>
+		</ProjectContext.Provider>
 	);
 };

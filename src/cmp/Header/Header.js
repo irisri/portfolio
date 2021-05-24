@@ -1,4 +1,6 @@
 import React from "react";
+import { SocialIcon } from "react-social-icons";
+import "./Header.scss";
 
 export function Header() {
 	return (
@@ -14,6 +16,26 @@ export function Header() {
 						enthusiastic about developing and learning to become the
 						professional developer I know I can be!
 					</p>
+					<div className="social-icon">
+						<SocialIcon
+							className="icon"
+							bgColor="black"
+							target="_blank"
+							url="https://www.linkedin.com/in/iris-rifold/"
+						/>
+						<SocialIcon
+							className="icon"
+							bgColor="black"
+							target="_blank"
+							url="https://github.com/irisri"
+						/>
+						<SocialIcon
+							className="icon"
+							bgColor="black"
+							target="_blank"
+							url="mailto:irisrifold@gmail.com"
+						/>
+					</div>
 				</header>
 			</div>
 		</section>

@@ -8,13 +8,17 @@ export function Skills() {
 	const { skills } = useContext(CvContext);
 
 	return (
-		<section className="skills">
-			<div className="social-icons">
+		<section className="skills flex">
+			{/* <div className="social-icons">
 				<SocialIcon
-					class="social-icon"
+					bgColor="black"
 					url="https://www.linkedin.com/in/iris-rifold/"></SocialIcon>
-				<SocialIcon url="https://github.com/irisri"></SocialIcon>
-			</div>
+				<SocialIcon
+					bgColor="black"
+					url="https://github.com/irisri"></SocialIcon>
+			</div> */}
+
+			<h2 className="text-color">Skills:</h2>
 			<div className="flex">
 				{skills.map((skill, index) => (
 					<Skill key={index} skill={skill} />
